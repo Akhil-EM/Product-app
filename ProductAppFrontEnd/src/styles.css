@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+@import'~bootstrap/dist/css/bootstrap.min.css';
+
+.btn-custom{
+    background-color: rgb(86, 88, 86);
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    cursor: help;
+    font-weight: bold;
+    padding: 1%;
+    padding-left: 4%;
+    padding-right: 4%;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-custom:hover{ background-color: rgb(0, 0, 0);}
+.contin-custom{
+    margin-top:2%;
+    margin-bottom:2%; 
+}
+.chead_custom
+{
+    text-align: center;
+}

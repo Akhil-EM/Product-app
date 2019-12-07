@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>
+            <input type="button" class="btn btn-primary" (click)="change_value()" value="{{btn_name}}">
+            </th>
+            <th>Product</th>
+            <th>Code</th>
+            <th>Release Date</th>
+            <th>Discription</th>
+            <th>Price</th>
+            <th>Rating</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+  
+        <tbody *ngIf='products_arry && products_arry.length'>
+        
+            <tr *ngFor="let i of products_arry">
+              <td>
+                <img *ngIf="flag" src="{{i.imageUrl}}"  class="image-des" alt="can't load image">   
+              </td>
+              <td>
+                 {{i.ProductName}}
+              </td>
+              <td>
+                  {{i.ProductCode}}
+              </td>
+              <td>
+                  {{i.releaseDate}}
+              </td>
+              <td>
+                {{i.discription}}
+              </td>
+              <td>
+                  {{i.price}}
+              </td>
+              <td>
+                  {{i.StarRating}}
+                  
+              </td>
+              <td>
+  
+                      <input type="submit" name="submit" value="Edit" class="btn btn-warning" (click)="edit_product(i)"/>
+              
+                  <br>
+                  <br>
+                        <input type="submit" name="submit" value="Delete" class="btn btn-danger" (click)="delete_product(i._id)"/>
+                       
+              </td>
+              <td></td>
+            </tr>
+        </tbody>
+  
+      </table>
+    </div>
+  
+  </div>

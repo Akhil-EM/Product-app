@@ -1,0 +1,95 @@
+<div class="container contin-custom">
+    <div class="card">
+      <div class="card-header chead_custom" ><h1>Edit product</h1></div>
+       <div class="card-body">
+           <form name="form" #f="ngForm" novalidate (ngSubmit)="f.form.valid && onSubmit(log_data._id)">
+              <div class="form-group">            
+                  <div class="form-group">
+                      <label for="productId">Product Id</label>
+                      
+                      <input type="number" class="form-control" name="productId" [(ngModel)]="log_data.productId" 
+                      #productId="ngModel"  
+                      [ngClass]="{ 'is-invalid': f.submitted && productId.invalid}" required  />
+                      <div *ngIf="f.submitted && productId.invalid" class="invalid-feedback">
+                          <div *ngIf="productId.errors.required">product Id is required</div>
+                      </div>
+                  </div>
+              </div>
+              <div class="form-group">
+                <label for="productName">Product Name</label>
+                <input type="text" class="form-control" name="productName" [(ngModel)]="log_data.ProductName" 
+                #productName="ngModel" 
+                [ngClass]="{ 'is-invalid': f.submitted && productName.invalid}" required  />
+                <div *ngIf="f.submitted && productName.invalid" class="invalid-feedback">
+                    <div *ngIf="productName.errors.required">Product Name is required</div>
+                </div>
+            </div>
+            <!-- ProductCode -->
+            <div class="form-group">
+                <label for="productCode">product code</label>
+                <input type="text" class="form-control" name="ProductCode" [(ngModel)]="log_data.ProductCode" 
+                #productCode="ngModel" 
+                [ngClass]="{ 'is-invalid': f.submitted && productCode.invalid}" required  />
+                <div *ngIf="f.submitted && productCode.invalid" class="invalid-feedback">
+                    <div *ngIf="productCode.errors.required">Product Code is required</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="releaseDate">release Date</label>
+                <input type="text" class="form-control" name="releaseDate" [(ngModel)]="log_data.releaseDate" 
+                #releaseDate="ngModel" 
+                [ngClass]="{ 'is-invalid': f.submitted && releaseDate.invalid}" required  />
+                <div *ngIf="f.submitted && releaseDate.invalid" class="invalid-feedback">
+                    <div *ngIf="releaseDate.errors.required">release Date  is required</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="description">discription</label>
+                <input type="text" class="form-control" name="description" [(ngModel)]="log_data.discription" 
+                #description="ngModel" 
+                [ngClass]="{ 'is-invalid': f.submitted && description.invalid}" required  />
+                <div *ngIf="f.submitted && description.invalid" class="invalid-feedback">
+                    <div *ngIf="description.errors.required">discription  is required</div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="price">price</label>
+                <input type="number" class="form-control" name="price" [(ngModel)]="log_data.price" 
+                #price="ngModel" 
+                [ngClass]="{ 'is-invalid': f.submitted && price.invalid}" required  />
+                <div *ngIf="f.submitted && price.invalid" class="invalid-feedback">
+                    <div *ngIf="price.errors.required">price  is required</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="starRating"> Rating</label>
+                <input type="number" class="form-control" name="starRating" [(ngModel)]="log_data.StarRating" 
+                #starRating="ngModel" 
+                [ngClass]="{ 'is-invalid': f.submitted && starRating.invalid}" required  />
+                <div *ngIf="f.submitted && starRating.invalid" class="invalid-feedback">
+                    <div *ngIf="starRating.errors.required">Rating  is required</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="imageUrl"> image Url</label>
+                <input type="text" class="form-control" name="imageUrl" [(ngModel)]="log_data.imageUrl" 
+                #imageUrl="ngModel" 
+                [ngClass]="{ 'is-invalid': f.submitted && imageUrl.invalid}" required  />
+                <div *ngIf="f.submitted && imageUrl.invalid" class="invalid-feedback">
+                    <div *ngIf="imageUrl.errors.required">imageUrl  is required</div>
+                </div>
+            </div>
+
+              <div class="form-group">
+                  <button type="submit" class="btn-custom" name="login" id="login">update</button>
+              </div>
+           </form>     
+       </div>
+    </div>
+  </div>
+  
